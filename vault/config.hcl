@@ -8,14 +8,12 @@ listener "tcp" {
   tls_disable = true
 }
 
-storage "dynamodb" {
-  ha_enabled = "true"
-  region     = "us-west-2"
-  table      = "vault-dynamodb-backend"
+storage "raft" {
+  path = "/path/to/raft/data"
 }
 # Auto-unseal
 seal "awskms" {
-  region     = "us-west-2"
+  region     = "eu-west-2"
   # Set by environment variable VAULT_AWSKMS_SEAL_KEY_ID
   # kms_key_id = "example"
 }

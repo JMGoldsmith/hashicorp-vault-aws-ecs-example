@@ -5,7 +5,7 @@ variable "profile" {
 
 variable "region" {
     type = string
-    default = "us-west-2"
+    default = "eu-west-2"
 }
 
 variable "vpc_id" {
@@ -14,7 +14,7 @@ variable "vpc_id" {
 
 variable "cluster" {
     type = string
-    default = "us-west-2-ecs-it-develop-utility-01"
+    default = "eu-west-2-ecs-it-develop-utility-01"
 }
 
 variable "desired_count" {

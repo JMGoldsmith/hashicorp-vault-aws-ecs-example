@@ -1,4 +1,4 @@
-FROM vault:1.4.1
+FROM vault:latest
 
 RUN update-ca-certificates
 COPY vault/config.hcl /vault/config

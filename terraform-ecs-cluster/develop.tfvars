@@ -1,4 +1,4 @@
-region = "us-west-2"
+region = "eu-west-2"
 environment = "develop"
 vpc_id = "vpc-XXXXX"
 vpc_zone_identifier = ["subnet-XXX", "subnet-ZZZ", "subnet-YYY"]
