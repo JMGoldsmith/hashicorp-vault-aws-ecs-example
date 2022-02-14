@@ -28,7 +28,8 @@ resource "aws_ecs_task_definition" "task" {
         "memory": 512,
         "essential": true,
         "environment": [
-            {"name": "VAULT_AWSKMS_SEAL_KEY_ID", "value": "${aws_kms_key.vault.key_id}"}
+            {"name": "VAULT_AWSKMS_SEAL_KEY_ID", "value": "${aws_kms_key.vault.key_id}"},
+            {"name": "VAULT_CLUSTER_ADDR", "value": "$(hostname -i):8201"}
         ],
         "portMappings": [
             {

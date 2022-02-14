@@ -10,7 +10,11 @@ listener "tcp" {
 
 storage "raft" {
   path = "/path/to/raft/data"
+  retry_join {
+    auto_join = "provider=aws region=eu-west-2 tag_key=vault tag_value=... access_key_id=... secret_access_key=..."
+  }
 }
+
 # Auto-unseal
 seal "awskms" {
   region     = "eu-west-2"
